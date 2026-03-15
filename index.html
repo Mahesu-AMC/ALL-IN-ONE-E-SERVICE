@@ -1,328 +1,937 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Webpage Design</title>
-    <link rel="stylesheet" href="style.css">
-    <script>    *{
-        margin: 0;
-        padding: 0;
-    }
-    
-    .main{
-        width: 100%;
-        background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
-        background-position: center;
-        background-size: cover
-        ;
-        height: 100vh;
-        background-repeat: repeat-y;
-        position: fixed;
-    }
-    
-    .navbar{
-        width: 1200px;
-        height: 75px;
-        margin: auto;
-    }
-    
-    .icon{
-        width: 200px;
-        float: left;
-        height: 70px;
-    }
-    
-    .logo{
-        color: #ff7200;
-        font-size: 35px;
-        font-family: Algerian;
-        padding-left: 10px;
-        float: left;
-        padding-top: 5px;
-        margin-top: 5px
-    }
-    
-    .menu{
-        width: 400px;
-        float: right;
-        height: 70px;
-    }
-    
-    ul{
-        float: left;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    ul li{
-        list-style: none;
-        margin-left: 62px;
-        margin-top: 27px;
-        font-size: 14px;
-    }
-    
-    ul li a{
-        text-decoration: none;
-        color: #fff;
-        font-family: Arial;
-        font-weight: bold;
-        transition: 0.4s ease-in-out;
-    }
-    
-    ul li a:hover{
-        color: #ff7200;
-    }
-    
-    .search{
-        width: 330px;
-        float: left;
-        margin-left: 270px;
-    }
-    
-    .srch{
-        font-family: 'Times New Roman';
-        width: 200px;
-        height: 40px;
-        background: transparent;
-        border: 1px solid #ff7200;
-        margin-top: 13px;
-        color: #fff;
-        border-right: none;
-        font-size: 16px;
-        float: left;
-        padding: 10px;
-        border-bottom-left-radius: 5px;
-        border-top-left-radius: 5px;
-    }
-    
-    .btn{
-        width: 100px;
-        height: 40px;
-        background: #ff7200;
-        border: 2px solid #ff7200;
-        margin-top: 13px;
-        color: #fff;
-        font-size: 15px;
-        border-bottom-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        transition: 0.2s ease;
-        cursor: pointer;
-    }
-    .btn:hover{
-        color: #000;
-    }
-    
-    .btn:focus{
-        outline: none;
-    }
-    
-    .srch:focus{
-        outline: none;
-    }
-    
-    .content{
-        width: 1200px;
-        height: auto;
-        margin: auto;
-        color: #fff;
-        position: relative;
-    }
-    
-    .content .par{
-        padding-left: 20px;
-        padding-bottom: 25px;
-        font-family: Arial;
-        letter-spacing: 1.2px;
-        line-height: 30px;
-    }
-    
-    .content h1{
-        font-family: 'Times New Roman';
-        font-size: 50px;
-        padding-left: 20px;
-        margin-top: 9%;
-        letter-spacing: 2px;
-    }
-    
-    .content .cn{
-        width: 160px;
-        height: 40px;
-        background: #ff7200;
-        border: none;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        font-size: 18px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: .4s ease;
-        
-    }
-    
-    .content .cn a{
-        text-decoration: none;
-        color: #000;
-        transition: .3s ease;
-    }
-    
-    .cn:hover{
-        background-color: #fff;
-    }
-    
-    .content span{
-        color: #ff7200;
-        font-size: 65px
-    }
-    
-    .form{
-        width: 250px;
-        height: 450px;
-        background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-        position: absolute;
-        top: 70px;
-        left: 900px;
-        transform: translate(0%,-5%);
-        border-radius: 10px;
-        padding: 25px;
-        object-fit:contain;
-    }
-    
-    .form h2{
-        width: 220px;
-        font-family: sans-serif;
-        text-align: center;
-        color: #030303;
-        font-size: 22px;
-        background-color: #ff7200;
-        border-radius: 10px;
-        margin: 2px;
-        padding: 8px;
-    }
-    
-    .form input{
-        width: 240px;
-        height: 35px;
-        background: transparent;
-        border-bottom: 1px solid #ff7200;
-        border-top: none;
-        border-right: none;
-        border-left: none;
-        color: #fff;
-        font-size: 15px;
-        letter-spacing: 1px;
-        margin-top: 30px;
-        font-family: sans-serif;
-    }
-    
-    .form input:focus{
-        outline: none;
-    }
-    
-    ::placeholder{
-        color: #fff;
-        font-family: Arial;
-    }
-    
-    .submit{
-        width: 240px;
-        height: 40px;
-        background: #ff7200;
-        border: none;
-        margin-top: 30px;
-        font-size: 18px;
-        border-radius: 10px;
-        cursor: pointer;
-        color: #fff;
-        transition: 0.4s ease;
-    }
-    .submit:hover{
-        cursor: pointer;
-        background: #fff;
-        color: #ff7200;
-        font-weight: bold;
-    }
-    .submit a{
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
-    }
-    .form .link{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 17px;
-        padding-top: 20px;
-        text-align: center;
-    }
-    .form .link a{
-        text-decoration: none;
-        color: #ff7200;
-    }
-    .liw{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 25px;
-        padding-top: 20px;
-        text-align: center;
-        color: #ff7200;
-    }
-    .icons a{
-        text-decoration: normal;
-        color: rgb(165, 26, 26);
-    }
-    .icons ion-icon{
-        color: #fff;
-        font-size: 30px;
-        padding-left: 20px;
-        padding-top: 5px;
-        transition: 0.3s ease;
-    }
-    .icons ion-icon:hover{
-        color: #ff7200;
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All In One E-Service | Tamil Nadu</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --orange: #ff6a00;
+    --orange-light: #ff8c38;
+    --orange-glow: rgba(255,106,0,0.18);
+    --dark: #0b0e17;
+    --dark2: #12172a;
+    --dark3: #1a2035;
+    --card: rgba(255,255,255,0.04);
+    --card-border: rgba(255,106,0,0.18);
+    --text: #e8eaf0;
+    --muted: #8a93b2;
+    --white: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── ANIMATED BG ─── */
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,106,0,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,106,0,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .bg-blob {
+    position: fixed; border-radius: 50%; filter: blur(100px);
+    pointer-events: none; z-index: 0; opacity: 0.25;
+    animation: blobFloat 12s ease-in-out infinite alternate;
+  }
+  .blob1 { width: 600px; height: 600px; background: var(--orange); top: -200px; left: -200px; }
+  .blob2 { width: 400px; height: 400px; background: #1a40ff; bottom: -100px; right: -100px; animation-delay: -6s; }
+  @keyframes blobFloat { from { transform: translate(0,0) scale(1); } to { transform: translate(40px,30px) scale(1.08); } }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px; height: 68px;
+    background: rgba(11,14,23,0.82);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,106,0,0.12);
+  }
+  .nav-logo {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px; font-weight: 700; letter-spacing: 1.5px;
+    color: var(--white);
+    display: flex; align-items: center; gap: 10px;
+    cursor: pointer;
+  }
+  .nav-logo .logo-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--orange), #ff3c00);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .nav-logo span { color: var(--orange); }
+  .nav-links { display: flex; align-items: center; gap: 6px; }
+  .nav-link {
+    background: none; border: none; cursor: pointer;
+    color: var(--muted); font-size: 13px; font-family: 'Inter', sans-serif;
+    font-weight: 500; letter-spacing: 0.5px; padding: 6px 14px;
+    border-radius: 6px; transition: all 0.2s;
+  }
+  .nav-link:hover, .nav-link.active { color: var(--white); background: var(--orange-glow); }
+  .nav-cta {
+    background: var(--orange); color: #fff; border: none; cursor: pointer;
+    font-size: 13px; font-weight: 600; padding: 8px 18px;
+    border-radius: 8px; transition: all 0.2s; font-family: 'Inter', sans-serif;
+  }
+  .nav-cta:hover { background: var(--orange-light); transform: translateY(-1px); }
+
+  /* ─── PAGES ─── */
+  .page { display: none; position: relative; z-index: 1; min-height: 100vh; padding-top: 68px; }
+  .page.active { display: block; }
+
+  /* ─── HERO ─── */
+  #page-home {
+    display: none; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center;
+    padding: 120px 24px 80px;
+    min-height: 100vh;
+  }
+  #page-home.active { display: flex; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--orange-glow); border: 1px solid var(--card-border);
+    color: var(--orange-light); font-size: 12px; font-weight: 600;
+    letter-spacing: 1.5px; padding: 6px 16px; border-radius: 100px;
+    text-transform: uppercase; margin-bottom: 28px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge::before { content: '●'; font-size: 8px; animation: pulse 1.4s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(42px, 7vw, 88px);
+    font-weight: 700; line-height: 1.05; letter-spacing: -1px;
+    color: var(--white); margin-bottom: 6px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  .hero-title .accent { color: var(--orange); }
+  .hero-sub {
+    font-size: clamp(14px, 2vw, 17px); color: var(--muted);
+    max-width: 520px; line-height: 1.7; margin: 16px auto 40px;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; animation: fadeUp 0.7s 0.3s ease both; }
+  .btn-primary {
+    background: var(--orange); color: #fff; border: none; cursor: pointer;
+    font-size: 15px; font-weight: 600; padding: 14px 32px;
+    border-radius: 10px; transition: all 0.25s; font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 24px rgba(255,106,0,0.3);
+  }
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,106,0,0.4); }
+  .btn-outline {
+    background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.15);
+    cursor: pointer; font-size: 15px; font-weight: 500; padding: 14px 32px;
+    border-radius: 10px; transition: all 0.25s; font-family: 'Inter', sans-serif;
+  }
+  .btn-outline:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-glow); }
+
+  .hero-stats {
+    display: flex; gap: 40px; margin-top: 70px; flex-wrap: wrap; justify-content: center;
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Rajdhani', sans-serif; font-size: 36px; font-weight: 700;
+    color: var(--white); line-height: 1;
+  }
+  .stat-num span { color: var(--orange); }
+  .stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; letter-spacing: 0.5px; }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+
+  /* ─── SERVICES PAGE ─── */
+  .page-inner { max-width: 1200px; margin: 0 auto; padding: 48px 24px; }
+  .section-header { margin-bottom: 40px; }
+  .section-tag {
+    display: inline-block; color: var(--orange); font-size: 12px;
+    font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); line-height: 1.1;
+  }
+  .section-desc { color: var(--muted); font-size: 15px; margin-top: 8px; max-width: 500px; line-height: 1.7; }
+
+  /* Search bar */
+  .search-wrap {
+    display: flex; gap: 0; max-width: 460px; margin-bottom: 40px;
+    border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden;
+    background: var(--card);
+  }
+  .search-wrap input {
+    flex: 1; background: none; border: none; outline: none;
+    color: var(--text); font-size: 14px; padding: 14px 18px;
+    font-family: 'Inter', sans-serif;
+  }
+  .search-wrap input::placeholder { color: var(--muted); }
+  .search-wrap button {
+    background: var(--orange); border: none; cursor: pointer;
+    color: #fff; font-size: 13px; font-weight: 600; padding: 0 22px;
+    font-family: 'Inter', sans-serif; letter-spacing: 0.3px;
+  }
+
+  /* Category tabs */
+  .cat-tabs { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+  .cat-tab {
+    background: var(--card); border: 1px solid var(--card-border);
+    color: var(--muted); font-size: 13px; font-weight: 500;
+    padding: 8px 18px; border-radius: 8px; cursor: pointer;
+    transition: all 0.2s; font-family: 'Inter', sans-serif;
+  }
+  .cat-tab:hover, .cat-tab.active {
+    background: var(--orange-glow); border-color: var(--orange);
+    color: var(--orange-light);
+  }
+
+  /* Service grid */
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  .service-card {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 24px; cursor: pointer;
+    transition: all 0.25s; position: relative; overflow: hidden;
+    text-decoration: none;
+  }
+  .service-card::before {
+    content: ''; position: absolute; inset: 0; opacity: 0;
+    background: linear-gradient(135deg, var(--orange-glow) 0%, transparent 60%);
+    transition: opacity 0.3s;
+  }
+  .service-card:hover { border-color: var(--orange); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(255,106,0,0.15); }
+  .service-card:hover::before { opacity: 1; }
+
+  .service-card-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: var(--orange-glow); border: 1px solid var(--card-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 16px;
+  }
+  .service-card-title {
+    font-family: 'Rajdhani', sans-serif; font-size: 17px; font-weight: 600;
+    color: var(--white); margin-bottom: 6px; letter-spacing: 0.3px;
+  }
+  .service-card-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .service-card-arrow {
+    position: absolute; top: 22px; right: 22px;
+    color: var(--muted); font-size: 18px; transition: all 0.2s;
+  }
+  .service-card:hover .service-card-arrow { color: var(--orange); transform: translate(2px,-2px); }
+  .service-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 3px 10px; border-radius: 6px; margin-top: 12px;
+    background: var(--orange-glow); color: var(--orange-light);
+    border: 1px solid rgba(255,106,0,0.2);
+  }
+
+  /* ─── SERVICE DETAIL PAGE ─── */
+  #page-detail .page-inner { max-width: 900px; }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: none; border: 1px solid var(--card-border);
+    color: var(--muted); cursor: pointer; font-size: 13px;
+    padding: 8px 16px; border-radius: 8px; margin-bottom: 36px;
+    transition: all 0.2s; font-family: 'Inter', sans-serif;
+  }
+  .back-btn:hover { color: var(--orange); border-color: var(--orange); background: var(--orange-glow); }
+
+  .detail-header {
+    display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;
+    padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .detail-icon {
+    width: 64px; height: 64px; border-radius: 16px;
+    background: var(--orange-glow); border: 1px solid var(--card-border);
+    display: flex; align-items: center; justify-content: center; font-size: 30px;
+    flex-shrink: 0;
+  }
+  .detail-title {
+    font-family: 'Rajdhani', sans-serif; font-size: 34px; font-weight: 700;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .detail-subtitle { color: var(--muted); font-size: 15px; line-height: 1.6; }
+
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+  @media(max-width:640px) { .detail-grid { grid-template-columns: 1fr; } }
+
+  .detail-card {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 24px;
+  }
+  .detail-card-label {
+    font-size: 11px; font-weight: 600; color: var(--orange);
+    letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .detail-card ul { list-style: none; }
+  .detail-card ul li {
+    display: flex; align-items: center; gap: 10px;
+    color: var(--text); font-size: 14px; padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .detail-card ul li:last-child { border-bottom: none; }
+  .detail-card ul li::before {
+    content: '✓'; width: 22px; height: 22px; border-radius: 6px;
+    background: var(--orange-glow); color: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0;
+  }
+
+  .detail-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-visit {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--orange); color: #fff; text-decoration: none;
+    font-size: 15px; font-weight: 600; padding: 14px 28px;
+    border-radius: 10px; transition: all 0.25s; font-family: 'Inter', sans-serif;
+    border: none; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(255,106,0,0.3);
+  }
+  .btn-visit:hover { background: var(--orange-light); transform: translateY(-2px); }
+  .btn-visit-sec {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--card); color: var(--text); text-decoration: none;
+    font-size: 15px; font-weight: 500; padding: 14px 28px;
+    border-radius: 10px; transition: all 0.25s; font-family: 'Inter', sans-serif;
+    border: 1px solid var(--card-border); cursor: pointer;
+  }
+  .btn-visit-sec:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-glow); }
+
+  /* ─── ABOUT PAGE ─── */
+  .about-hero {
+    text-align: center; padding: 60px 24px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 40px; }
+  .team-card {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 28px 24px; text-align: center;
+  }
+  .team-avatar {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange), #ff3c00);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Rajdhani', sans-serif; font-size: 24px; font-weight: 700;
+    color: #fff; margin: 0 auto 16px;
+  }
+  .team-name { font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  .team-email { font-size: 12px; color: var(--muted); word-break: break-all; }
+
+  /* ─── CONTACT PAGE ─── */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  @media(max-width:640px) { .contact-grid { grid-template-columns: 1fr; } }
+  .contact-form { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 32px; }
+  .form-group { margin-bottom: 20px; }
+  .form-label { display: block; font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 8px; }
+  .form-input {
+    width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--card-border);
+    border-radius: 8px; color: var(--text); font-size: 14px; padding: 12px 16px;
+    font-family: 'Inter', sans-serif; outline: none; transition: border 0.2s;
+  }
+  .form-input:focus { border-color: var(--orange); }
+  .form-input::placeholder { color: var(--muted); }
+  textarea.form-input { resize: vertical; min-height: 120px; }
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-info-card {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .contact-info-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--orange-glow); color: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .contact-info-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  .contact-info-val { font-size: 13px; color: var(--muted); }
+
+  /* Hidden service cards */
+  .service-card[data-cat].hidden { display: none; }
+
+  /* Divider */
+  .divider { height: 1px; background: rgba(255,255,255,0.06); margin: 48px 0; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--dark); }
+  ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+  @media(max-width:768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero-stats { gap: 24px; }
+    .detail-header { flex-direction: column; }
+  }
+</style>
 </head>
 <body>
 
-    <div class="main">
-        <div class="navbar">
-            <div class="icon"> <a href="main.html"target="-blank">
-                <h2 class="logo"><img src="3.png" alt="logo" width="120" height="120"></h2>
+<div class="bg-grid"></div>
+<div class="bg-blob blob1"></div>
+<div class="bg-blob blob2"></div>
 
-                <a href="FRAME.html"target="-blank">
-            </div>               
-             <div class="menu">
-                <a href="main.html"target="-blank"></a>
-            </div>
-            <div class="menu">
-               
-            </div>
-           
-            <div class="menu">
-               
-            </div>
-        </div> 
-        <div class="content"><br><br><br><br>
-            <h1><span><u> ALL IN ONE E-SERVICE</u></span></h1>  
-             <br>
-            
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="logo-icon">⚡</div>
+    ALL IN ONE <span>E-SERVICE</span>
+  </div>
+  <div class="nav-links">
+    <button class="nav-link active" id="nav-home" onclick="showPage('home')">Home</button>
+    <button class="nav-link" id="nav-services" onclick="showPage('services')">Services</button>
+    <button class="nav-link" id="nav-about" onclick="showPage('about')">About</button>
+    <button class="nav-link" id="nav-contact" onclick="showPage('contact')">Contact</button>
+  </div>
+  <button class="nav-cta" onclick="showPage('services')">Get Started →</button>
+</nav>
 
-                <button class="cn"><a href="main.html">GET IN</a></button><br><br><br><br>
+<!-- ═══════════════════════════════ HOME ═══════════════════════════════ -->
+<div id="page-home" class="page active">
+  <div class="hero-badge">Tamil Nadu Government Digital Portal</div>
+  <h1 class="hero-title">All Your <span class="accent">E-Services</span><br>In One Place</h1>
+  <p class="hero-sub">Access Aadhaar, PAN, Voter ID, Ration Card, certificates, police services and more — all from a single, unified portal.</p>
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="showPage('services')">Browse Services</button>
+    <button class="btn-outline" onclick="showPage('about')">Learn More</button>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">30<span>+</span></div><div class="stat-label">Services Available</div></div>
+    <div class="stat"><div class="stat-num">100<span>%</span></div><div class="stat-label">Free to Use</div></div>
+    <div class="stat"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Always Accessible</div></div>
+    <div class="stat"><div class="stat-num">TN</div><div class="stat-label">Tamil Nadu Focused</div></div>
+  </div>
+</div>
 
-          
-
-                </div>
-                    </div>
-                </div>
-        </div>
-        
+<!-- ═══════════════════════════════ SERVICES ═══════════════════════════ -->
+<div id="page-services" class="page">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-tag">● All Services</div>
+      <h2 class="section-title">Government & Digital Services</h2>
+      <p class="section-desc">Click any service to view required documents and access the official portal.</p>
     </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script>
-        const form = document.getElementById("form");
-        const email = document.getElementById("email");
-        const password = document.getElementById("password");
-        form.addEventListener('Login',e =>{
-            e.preventDefault();
-        });
 
-    </script>
-   
+    <div class="search-wrap">
+      <input type="text" id="svc-search" placeholder="Search services..." oninput="filterServices()">
+      <button>Search</button>
+    </div>
+
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="filterCat('all', this)">All</button>
+      <button class="cat-tab" onclick="filterCat('identity', this)">Identity</button>
+      <button class="cat-tab" onclick="filterCat('land', this)">Land & Property</button>
+      <button class="cat-tab" onclick="filterCat('welfare', this)">Welfare Schemes</button>
+      <button class="cat-tab" onclick="filterCat('travel', this)">Travel & Booking</button>
+      <button class="cat-tab" onclick="filterCat('utilities', this)">Utilities</button>
+      <button class="cat-tab" onclick="filterCat('education', this)">Education</button>
+    </div>
+
+    <div class="service-grid" id="service-grid">
+
+      <!-- Identity -->
+      <div class="service-card" data-cat="identity" data-title="Aadhaar Card" onclick="showDetail('aadhar')">
+        <div class="service-card-icon">🪪</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Aadhaar Card</div>
+        <div class="service-card-desc">Download your Aadhaar card using your 12-digit Aadhaar number.</div>
+        <span class="service-badge">UIDAI</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="PAN Card" onclick="showDetail('pan')">
+        <div class="service-card-icon">💳</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">PAN Card</div>
+        <div class="service-card-desc">Apply for instant e-PAN linked to your Aadhaar through Income Tax portal.</div>
+        <span class="service-badge">Income Tax</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="Voter ID" onclick="showDetail('voter')">
+        <div class="service-card-icon">🗳️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Voter ID</div>
+        <div class="service-card-desc">Register, update or download your Voter ID card via National Voter Portal.</div>
+        <span class="service-badge">NVSP</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="Ration Card" onclick="showDetail('ration')">
+        <div class="service-card-icon">🛒</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Ration Card Details</div>
+        <div class="service-card-desc">View and manage your ration card information on the TN PDS portal.</div>
+        <span class="service-badge">TNPDS</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="TN Certificates" onclick="showDetail('certs')">
+        <div class="service-card-icon">📜</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">TN Certificates</div>
+        <div class="service-card-desc">Income, community, nativity certificates and more via e-Districts portal.</div>
+        <span class="service-badge">e-Districts TN</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="Cyber Crime" onclick="showDetail('cyber')">
+        <div class="service-card-icon">🛡️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Cyber Crime</div>
+        <div class="service-card-desc">Report cybercrime, online fraud and digital offences to authorities.</div>
+        <span class="service-badge">Cyber Crime Portal</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="Complaint Register" onclick="openExternal('https://eservices.tnpolice.gov.in/CCTNSNICSDC/ComplaintRegistrationPage?43')">
+        <div class="service-card-icon">📋</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Complaint Register</div>
+        <div class="service-card-desc">File a police complaint online via Tamil Nadu Police e-Services portal.</div>
+        <span class="service-badge">TN Police</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="TN Police" onclick="openExternal('https://eservices.tnpolice.gov.in/CCTNSNICSDC/Index?4')">
+        <div class="service-card-icon">👮</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Tamil Nadu Police</div>
+        <div class="service-card-desc">Access TN Police e-services for various public services and complaints.</div>
+        <span class="service-badge">TN Police</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="RC Certificate" onclick="showDetail('rc')">
+        <div class="service-card-icon">🚗</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Registration Certificate (RC)</div>
+        <div class="service-card-desc">Check and download your vehicle registration certificate.</div>
+        <span class="service-badge">VAHAN</span>
+      </div>
+
+      <div class="service-card" data-cat="identity" data-title="COVID Certificate" onclick="openExternal('https://selfregistration.cowin.gov.in/')">
+        <div class="service-card-icon">💉</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">COVID Certificate</div>
+        <div class="service-card-desc">Download your COVID-19 vaccination certificate from CoWIN portal.</div>
+        <span class="service-badge">CoWIN</span>
+      </div>
+
+      <!-- Land -->
+      <div class="service-card" data-cat="land" data-title="Patta Chitta" onclick="openExternal('https://eservices.tn.gov.in/eservicesnew/land/chittaNewRuralTamil.html?lan=ta')">
+        <div class="service-card-icon">🗺️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Patta Chitta</div>
+        <div class="service-card-desc">View land ownership and chitta records for rural Tamil Nadu properties.</div>
+        <span class="service-badge">eServices TN</span>
+      </div>
+
+      <div class="service-card" data-cat="land" data-title="Vilangam Certificate" onclick="openExternal('https://tnreginet.gov.in/portal/webHP?requestType=ApplicationRH&actionVal=homePage&screenId=114&UserLocaleID=ta')">
+        <div class="service-card-icon">🏛️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Vilangam Certificate</div>
+        <div class="service-card-desc">Get encumbrance certificates and property registration details via TNREGINET.</div>
+        <span class="service-badge">TNREGINET</span>
+      </div>
+
+      <div class="service-card" data-cat="land" data-title="Land Map FMB" onclick="openExternal('https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRuralFMB_en.html?lan=en')">
+        <div class="service-card-icon">📐</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Land Map (FMB)</div>
+        <div class="service-card-desc">View Field Measurement Book (FMB) maps for your land parcels.</div>
+        <span class="service-badge">eServices TN</span>
+      </div>
+
+      <!-- Welfare -->
+      <div class="service-card" data-cat="welfare" data-title="EPFO" onclick="openExternal('https://www.epfindia.gov.in/site_en/index.php')">
+        <div class="service-card-icon">👷</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">EPFO</div>
+        <div class="service-card-desc">Employee Provident Fund services, claims, and account management.</div>
+        <span class="service-badge">EPFO</span>
+      </div>
+
+      <div class="service-card" data-cat="welfare" data-title="Agriculture Schemes" onclick="openExternal('https://www.tn.gov.in/scheme/department_wise/2')">
+        <div class="service-card-icon">🌾</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Agriculture Schemes</div>
+        <div class="service-card-desc">Government agricultural welfare schemes and subsidies for farmers in TN.</div>
+        <span class="service-badge">TN Gov</span>
+      </div>
+
+      <div class="service-card" data-cat="welfare" data-title="Tribal Welfare" onclick="openExternal('https://www.tn.gov.in/scheme/department_wise/1')">
+        <div class="service-card-icon">🤝</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Tribal Welfare Schemes</div>
+        <div class="service-card-desc">Welfare schemes designed for tribal communities in Tamil Nadu.</div>
+        <span class="service-badge">TN Gov</span>
+      </div>
+
+      <div class="service-card" data-cat="welfare" data-title="Finance Schemes" onclick="openExternal('https://www.tn.gov.in/scheme/department_wise/9')">
+        <div class="service-card-icon">💰</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Finance Schemes</div>
+        <div class="service-card-desc">TN government financial assistance, loans and subsidy programs.</div>
+        <span class="service-badge">TN Gov</span>
+      </div>
+
+      <div class="service-card" data-cat="welfare" data-title="Labour Welfare" onclick="openExternal('https://www.tn.gov.in/scheme/department_wise/18')">
+        <div class="service-card-icon">⚙️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Labour Welfare</div>
+        <div class="service-card-desc">Labour welfare fund, schemes and benefits for workers in Tamil Nadu.</div>
+        <span class="service-badge">TN Gov</span>
+      </div>
+
+      <div class="service-card" data-cat="welfare" data-title="LIC" onclick="openExternal('https://licindia.in/Home-(1)/Customer-Portal')">
+        <div class="service-card-icon">🛡️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">LIC Customer Portal</div>
+        <div class="service-card-desc">View and manage your Life Insurance Corporation of India policies.</div>
+        <span class="service-badge">LIC India</span>
+      </div>
+
+      <!-- Travel -->
+      <div class="service-card" data-cat="travel" data-title="Train Booking" onclick="openExternal('https://www.irctc.co.in/nget/train-search')">
+        <div class="service-card-icon">🚂</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Train Booking</div>
+        <div class="service-card-desc">Search and book train tickets across India via IRCTC official portal.</div>
+        <span class="service-badge">IRCTC</span>
+      </div>
+
+      <div class="service-card" data-cat="travel" data-title="Bus Booking" onclick="openExternal('https://www.redbus.in/bus-tickets')">
+        <div class="service-card-icon">🚌</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Bus Booking</div>
+        <div class="service-card-desc">Book interstate and state bus tickets across Tamil Nadu and India.</div>
+        <span class="service-badge">RedBus</span>
+      </div>
+
+      <div class="service-card" data-cat="travel" data-title="Flight Booking" onclick="openExternal('https://www.makemytrip.com/flights/')">
+        <div class="service-card-icon">✈️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Flight Booking</div>
+        <div class="service-card-desc">Compare and book domestic and international flights at the best prices.</div>
+        <span class="service-badge">MakeMyTrip</span>
+      </div>
+
+      <div class="service-card" data-cat="travel" data-title="Flight Tracking" onclick="openExternal('https://www.flightradar24.com/10.27,79.91/10')">
+        <div class="service-card-icon">📡</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Flight Tracking</div>
+        <div class="service-card-desc">Live flight tracking over Tamil Nadu and India using Flightradar24.</div>
+        <span class="service-badge">Flightradar24</span>
+      </div>
+
+      <div class="service-card" data-cat="travel" data-title="Movie Booking" onclick="openExternal('https://in.bookmyshow.com/explore/movies')">
+        <div class="service-card-icon">🎬</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Movie Booking</div>
+        <div class="service-card-desc">Book cinema tickets for your favourite movies in Tamil Nadu.</div>
+        <span class="service-badge">BookMyShow</span>
+      </div>
+
+      <!-- Utilities -->
+      <div class="service-card" data-cat="utilities" data-title="EB Bill" onclick="openExternal('https://www.tnebnet.org/awp/login')">
+        <div class="service-card-icon">⚡</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">EB Bill (TANGEDCO)</div>
+        <div class="service-card-desc">View and pay your electricity bill online via TANGEDCO portal.</div>
+        <span class="service-badge">TANGEDCO</span>
+      </div>
+
+      <div class="service-card" data-cat="utilities" data-title="Sentence Corrector" onclick="openExternal('https://quillbot.com/')">
+        <div class="service-card-icon">✍️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Sentence Corrector</div>
+        <div class="service-card-desc">Paraphrase and grammar check your text with QuillBot AI tool.</div>
+        <span class="service-badge">QuillBot</span>
+      </div>
+
+      <div class="service-card" data-cat="utilities" data-title="Article Summary" onclick="openExternal('https://smmry.com/')">
+        <div class="service-card-icon">📝</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Article Summary</div>
+        <div class="service-card-desc">Automatically summarise long articles and documents with SMMRY.</div>
+        <span class="service-badge">SMMRY</span>
+      </div>
+
+      <div class="service-card" data-cat="utilities" data-title="TN Area Info" onclick="openExternal('https://www.tn.gov.in/government')">
+        <div class="service-card-icon">🏙️</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">TN Area Details</div>
+        <div class="service-card-desc">Browse districts, government offices and administrative details of Tamil Nadu.</div>
+        <span class="service-badge">TN Gov</span>
+      </div>
+
+      <!-- Education -->
+      <div class="service-card" data-cat="education" data-title="Anna University Result" onclick="showDetail('result')">
+        <div class="service-card-icon">🎓</div>
+        <div class="service-card-arrow">↗</div>
+        <div class="service-card-title">Anna University Results</div>
+        <div class="service-card-desc">Check your semester results from Anna University via both official portals.</div>
+        <span class="service-badge">Anna University</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ DETAIL ════════════════════════════ -->
+<div id="page-detail" class="page">
+  <div class="page-inner">
+    <button class="back-btn" onclick="showPage('services')">← Back to Services</button>
+    <div id="detail-content"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ ABOUT ════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-tag">● About This Portal</div>
+      <h2 class="section-title">Built for the People of Tamil Nadu</h2>
+      <p class="section-desc">All In One E-Service is a unified portal designed to help citizens quickly navigate and access government digital services without confusion.</p>
+    </div>
+
+    <div class="detail-grid" style="margin-bottom:40px">
+      <div class="detail-card">
+        <div class="detail-card-label">Our Mission</div>
+        <p style="color:var(--text);font-size:14px;line-height:1.8">We aim to bridge the digital gap by providing a single, easy-to-use interface that guides citizens to the right government portal — saving time, reducing frustration, and empowering people with digital access.</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-card-label">What We Offer</div>
+        <ul>
+          <li>30+ Government e-Services</li>
+          <li>Tamil Nadu focused links</li>
+          <li>Step-by-step document guides</li>
+          <li>Free, no registration required</li>
+          <li>Works on all devices</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-tag">● The Team</div>
+    <h3 style="font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:var(--white);margin:8px 0 0">Created By</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">M</div>
+        <div class="team-name">S. Maheswaran</div>
+        <div class="team-email">mahesu96@gmail.com</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">A</div>
+        <div class="team-name">C. Aswin</div>
+        <div class="team-email">aswinraja2816@gmail.com</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">J</div>
+        <div class="team-name">S. Jayasuriya</div>
+        <div class="team-email">sjstorm64@gmail.com</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">H</div>
+        <div class="team-name">D. Harish Jayaraj</div>
+        <div class="team-email">harieshjeyaraj11092002@gmail.com</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ CONTACT ═══════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="page-inner">
+    <div class="section-header">
+      <div class="section-tag">● Get in Touch</div>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-desc">Have a suggestion, issue or want to add a service? Reach out to the team.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input class="form-input" type="text" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input class="form-input" type="text" placeholder="e.g. Suggest a new service">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input" placeholder="Write your message here..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%" onclick="alert('Message sent! We will get back to you soon.')">Send Message</button>
+      </div>
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📧</div>
+          <div>
+            <div class="contact-info-title">Primary Contact</div>
+            <div class="contact-info-val">mahesu96@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📧</div>
+          <div>
+            <div class="contact-info-title">Developer</div>
+            <div class="contact-info-val">aswinraja2816@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-title">Location</div>
+            <div class="contact-info-val">Tamil Nadu, India</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">🕐</div>
+          <div>
+            <div class="contact-info-title">Response Time</div>
+            <div class="contact-info-val">Within 24–48 hours</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── SERVICE DETAIL DATA ───
+const serviceDetails = {
+  aadhar: {
+    icon: '🪪', title: 'Aadhaar Card', subtitle: 'Download your Aadhaar card digitally via UIDAI portal — no physical card required.',
+    docs: ['12-digit Aadhaar Number', 'Registered Mobile Number', 'OTP access on registered number'],
+    steps: ['Visit the official UIDAI portal', 'Enter your 12-digit Aadhaar number', 'Enter registered mobile OTP', 'Download your e-Aadhaar PDF'],
+    links: [{ label: 'Visit UIDAI Portal ↗', url: 'https://myaadhaar.uidai.gov.in/genricDownloadAadhaar' }]
+  },
+  pan: {
+    icon: '💳', title: 'PAN Card (e-PAN)', subtitle: 'Apply for a free instant e-PAN linked to your Aadhaar through the Income Tax Department portal.',
+    docs: ['12-digit Aadhaar Number', 'Registered Mobile Number linked to Aadhaar', 'Email ID (optional)'],
+    steps: ['Go to Income Tax pre-login portal', 'Click Instant e-PAN', 'Enter Aadhaar number and OTP', 'Download your e-PAN'],
+    links: [{ label: 'Visit Income Tax Portal ↗', url: 'https://eportal.incometax.gov.in/iec/foservices/#/pre-login/instant-e-pan' }]
+  },
+  voter: {
+    icon: '🗳️', title: 'Voter ID Card', subtitle: 'Register, update details or download your Voter ID card via the National Voter Service Portal.',
+    docs: ['Voter ID number (EPIC No.)', 'Registered Mobile Number', 'Date of Birth proof'],
+    steps: ['Visit NVSP portal', 'Login or register as new voter', 'Search for your name in electoral roll', 'Download e-EPIC voter card'],
+    links: [{ label: 'Visit NVSP Portal ↗', url: 'https://www.nvsp.in/' }]
+  },
+  ration: {
+    icon: '🛒', title: 'Ration Card Details', subtitle: 'View and manage ration card details, family members and allocation through Tamil Nadu PDS portal.',
+    docs: ['Registered Mobile Number (linked to Ration Card)', 'Ration Card Number'],
+    steps: ['Visit TNPDS portal', 'Enter registered mobile number', 'Verify with OTP', 'View your ration card details and allocation'],
+    links: [{ label: 'Visit TNPDS Portal ↗', url: 'https://www.tnpds.gov.in/home.xhtml' }]
+  },
+  certs: {
+    icon: '📜', title: 'TN Certificates', subtitle: 'Apply for and check status of income, community, nativity and other certificates through TN e-Districts portal.',
+    docs: ['Certificate Application ID', 'Aadhaar Card', 'Supporting documents as applicable'],
+    steps: ['Go to e-Districts TN portal', 'Enter your Certificate Application ID', 'Check application status', 'Download certificate when ready'],
+    links: [{ label: 'Visit e-Districts Portal ↗', url: 'https://edistricts.tn.gov.in/revenue/status.html' }]
+  },
+  cyber: {
+    icon: '🛡️', title: 'Cyber Crime Report', subtitle: 'Report online fraud, cyberbullying, financial cyber crime and digital offences via the National Cyber Crime Portal.',
+    docs: ['Mobile Number for OTP verification', 'Details of the cyber incident', 'Supporting screenshots or evidence (optional)'],
+    steps: ['Visit cybercrime.gov.in', 'Login with mobile OTP', 'Select type of cybercrime', 'Fill incident details and submit'],
+    links: [{ label: 'Visit Cyber Crime Portal ↗', url: 'https://cybercrime.gov.in/' }]
+  },
+  rc: {
+    icon: '🚗', title: 'Registration Certificate (RC)', subtitle: 'Check vehicle registration details and download your RC book online through government VAHAN services.',
+    docs: ['Vehicle Registration Number', 'Chassis Number or Engine Number (optional)'],
+    steps: ['Visit Parivahan VAHAN portal', 'Enter vehicle registration number', 'View RC and vehicle details', 'Download RC document if needed'],
+    links: [{ label: 'Visit Parivahan Portal ↗', url: 'https://vahan.parivahan.gov.in/' }]
+  },
+  result: {
+    icon: '🎓', title: 'Anna University Results', subtitle: 'Check semester results from Anna University using both official exam result portals.',
+    docs: ['Register Number', 'Date of Birth'],
+    steps: ['Visit either Anna University portal', 'Enter your register number', 'Enter date of birth', 'View and download your result'],
+    links: [
+      { label: 'Portal 1 — aucoe.annauniv.edu ↗', url: 'https://aucoe.annauniv.edu/result/index.php' },
+      { label: 'Portal 2 — coe1.annauniv.edu ↗', url: 'https://coe1.annauniv.edu/home/index.php' }
+    ]
+  }
+};
+
+// ─── PAGE NAVIGATION ───
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const pg = document.getElementById('page-' + name);
+  if (pg) pg.classList.add('active');
+  const navLink = document.getElementById('nav-' + name);
+  if (navLink) navLink.classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// ─── SERVICE DETAIL ───
+function showDetail(key) {
+  const d = serviceDetails[key];
+  if (!d) return;
+  const linksHtml = d.links.map(l =>
+    `<a href="${l.url}" target="_blank" class="btn-visit">${l.label}</a>`
+  ).join('');
+  document.getElementById('detail-content').innerHTML = `
+    <div class="detail-header">
+      <div class="detail-icon">${d.icon}</div>
+      <div>
+        <div class="detail-title">${d.title}</div>
+        <div class="detail-subtitle">${d.subtitle}</div>
+      </div>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-card">
+        <div class="detail-card-label">Documents Required</div>
+        <ul>${d.docs.map(i => `<li>${i}</li>`).join('')}</ul>
+      </div>
+      <div class="detail-card">
+        <div class="detail-card-label">Steps to Follow</div>
+        <ul>${d.steps.map((s,i) => `<li>${i+1}. ${s}</li>`).join('')}</ul>
+      </div>
+    </div>
+    <div class="detail-actions">${linksHtml}</div>
+  `;
+  showPage('detail');
+}
+
+// ─── OPEN EXTERNAL ───
+function openExternal(url) {
+  window.open(url, '_blank');
+}
+
+// ─── SEARCH ───
+function filterServices() {
+  const q = document.getElementById('svc-search').value.toLowerCase();
+  document.querySelectorAll('.service-card').forEach(card => {
+    const title = card.getAttribute('data-title') || '';
+    const desc = card.querySelector('.service-card-desc')?.textContent || '';
+    card.style.display = (title.toLowerCase().includes(q) || desc.toLowerCase().includes(q)) ? '' : 'none';
+  });
+}
+
+// ─── CATEGORY FILTER ───
+function filterCat(cat, btn) {
+  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.service-card').forEach(card => {
+    if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
 </body>
 </html>
